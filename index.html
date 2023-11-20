@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>metmeds</title>
+    <style>
+        body{
+            
+            background-image: url('medicines-offers-5.jpg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            
+        }
+    </style>
+</head>
+<body style="height: 710px;">
+    <br><br><br><br><br><br><br><br><br>
+    <center>
+    <h1>Register Page</h1>
+    <form>
+        <label>Enter UserName</label>
+        <input type="text" id="uname" required>
+        <br><br>
+        <label>Enter Password</label>
+        <input type="password" id="password" required>
+        <br><br>
+        <input type="button" value="Register" onclick="register()">
+        <input type="reset" value="Cancel">
+        <h3>If you already have account click here <a href="login.html">Login</a></h3>
+    </form>
+    </center>
+    <script>
+        function register()
+        {
+            var uname=document.getElementById("uname").value
+            var password=document.getElementById("password").value
+            localStorage.setItem("uname",uname)
+            localStorage.setItem("password",password)
+            window.location.href="login.html"
+        }
+    </script>
+</body>
+</html>

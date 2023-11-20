@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+        body{
+            width: 100%;
+            background-image: url('bg2.jpg');
+            background-repeat: no-repeat;
+        }
+        
+        .medshop1{
+             margin-bottom: 40px;
+        }
+        .manoutside1{
+            margin-top: -208px;
+        }
+
+    </style>
+</head>
+<body >
+    
+    <div style="width: 100%; display: table;">
+        <div style="display: table-row">
+    <div style=" display: table-cell; height:390px"> </div>
+    <div>
+     <form>
+        <center>
+        <h1>Login</h1>
+        <label>Enter UserName</label>
+        <input type="text" id="loginuname" required>
+        <br><br>
+        <label>Enter Password</label>
+        <input type="password" id="loginpassword" required>
+        <br><br>
+        <input type="button" value="Login" onclick="login()">
+        <input type="reset" value="Cancel">
+        <h3>If you do not have account click here to register <a href="index.html">Register</a></h3>
+        </center>
+    </form>
+    <script>
+        function login()
+        {
+            var loginuname=document.getElementById("loginuname").value
+            var loginpassword=document.getElementById("loginpassword").value
+            var getuname=localStorage.getItem("uname")
+            var getpassword=localStorage.getItem("password")
+            if(loginuname===getuname &&  loginpassword===getpassword)
+            {
+                alert("login successful")
+                window.location.href="mainpage.html"
+            }
+            else
+            {
+                alert("login failed. please check your credentials")
+            }
+        }
+    </script>
+            </div>
+            <div style="display: table-cell;"> </div>
+        </div>
+        <div style="display: table-row">
+            <div style="width: 50px; display: table-cell;">
+                <img class="medshop1" src="medshop1.jpeg" atl="medshop1">
+             </div>
+            <div style="width: 1100px;"><marquee direction="right" scrollamount="15">
+        
+                <img class="medbike3" src="medbike3.gif" atl="medbike3" >
+                
+                
+                </marquee> </div>
+            <div style="display: table-cell;"> <img align="right" class="manoutside1" src="manoutside1.png" atl="manoutside1" > </div>
+        </div>
+    </div>
+
+        
+    </div>
+    
+</body>
+</html>
